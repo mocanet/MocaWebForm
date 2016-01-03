@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Moca.NETWebForm</id>
+    <title>Moca.NET Web Form</title>
+    <version>1.0.0</version>
+    <authors>MiYABiS</authors>
+    <owners>MiYABiS</owners>
+    <description>
+      DI&amp;AOP framework Moca.NET Web Form
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>
+      DI&amp;AOP framework Moca.NET Web Form
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://github.com/mocanet/MocaWebForm</projectUrl>
+    <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright © 2015 MiYABiS All Rights Reserved.</copyright>
+    <dependencies>
+      <dependency id="Moca.NETWebApp" version="2.1.0" />
+    </dependencies>
+    <references></references>
+    <tags>AOP DI ASP.NET</tags>
+  </metadata>
+  <files>
+    <file src="..\MocaWebForm20\bin\Release\MocaWebForm.dll" target="lib\net20-full\MocaWebForm.dll" />
+    <file src="..\MocaWebForm20\bin\Release\MocaWebForm.xml" target="lib\net20-full\MocaWebForm.xml" />
+    <file src="..\MocaWebForm35\bin\Release\MocaWebForm.dll" target="lib\net35-full\MocaWebForm.dll" />
+    <file src="..\MocaWebForm35\bin\Release\MocaWebForm.xml" target="lib\net35-full\MocaWebForm.xml" />
+    <file src="..\MocaWebForm40\bin\Release\MocaWebForm.dll" target="lib\net40-full\MocaWebForm.dll" />
+    <file src="..\MocaWebForm40\bin\Release\MocaWebForm.xml" target="lib\net40-full\MocaWebForm.xml" />
+    <file src="..\MocaWebForm45\bin\Release\MocaWebForm.dll" target="lib\net45-full\MocaWebForm.dll" />
+    <file src="..\MocaWebForm45\bin\Release\MocaWebForm.xml" target="lib\net45-full\MocaWebForm.xml" />
+    <file src="..\MocaWebForm46\bin\Release\MocaWebForm.dll" target="lib\net46-full\MocaWebForm.dll" />
+    <file src="..\MocaWebForm46\bin\Release\MocaWebForm.xml" target="lib\net46-full\MocaWebForm.xml" />
+  </files>
+</package>
