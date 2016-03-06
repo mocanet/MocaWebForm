@@ -14,6 +14,12 @@
         <div>
             <asp:Label ID="Label1" runat="server"></asp:Label>
         </div>
+        <div>
+            <asp:Label ID="lblViewstat" runat="server"></asp:Label><br />
+            <asp:Button ID="btn1" runat="server" Text="増加" />
+            <asp:Button ID="btn2" runat="server" Text="退避" />
+            <asp:Button ID="btn3" runat="server" Text="復元" />
+        </div>
     </form>
 </body>
 </html>

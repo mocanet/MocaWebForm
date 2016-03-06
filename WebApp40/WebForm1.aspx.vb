@@ -21,18 +21,30 @@ Public Class WebForm1
             data = cookieReq.Data.Value
         End If
 
-        Me.Label1.Text = tes.Test & mySession.Data & " ." & vs.Data & " ." & data
+        Me.Label1.Text = tes.Test & mySession.Data & " ." & data
         mySession.Data &= " Hoge"
-        If vs.Data Is Nothing Then
-            vs.Data = "0"
-        End If
-        vs.Data = CInt(vs.Data) + 1
         If cookieReq.Data Is Nothing Then
             data = "0"
         End If
         cookieRes.Data.Value = CInt(data) + 100
     End Sub
 
+    Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
+        If String.IsNullOrEmpty(lblViewstat.Text) Then
+            lblViewstat.Text = "0"
+        End If
+        Dim n As Integer = Int32.Parse(lblViewstat.Text)
+        n += 10
+        lblViewstat.Text = n.ToString
+    End Sub
+
+    Private Sub btn2_Click(sender As Object, e As EventArgs) Handles btn2.Click
+        vs.Data = lblViewstat.Text
+    End Sub
+
+    Private Sub btn3_Click(sender As Object, e As EventArgs) Handles btn3.Click
+        lblViewstat.Text = vs.Data
+    End Sub
 End Class
 
 Public Interface ITest
