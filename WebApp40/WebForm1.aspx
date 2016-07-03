@@ -12,7 +12,9 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server"></asp:Label>
+            <asp:Label ID="Label1" runat="server"></asp:Label><br />
+            <asp:Label ID="Label2" runat="server"></asp:Label><br />
+            <asp:Label ID="Label3" runat="server"></asp:Label><br />
         </div>
         <div>
             <asp:Label ID="lblViewstat" runat="server"></asp:Label><br />

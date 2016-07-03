@@ -10,7 +10,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server"></asp:Label>
+            <asp:button runat="server" ID="btnUpdate" Text="Update" /><br />
+            <asp:Label ID="Label1" runat="server"></asp:Label><br />
+            <asp:Label ID="Label2" runat="server"></asp:Label><br />
+            <asp:Label ID="Label3" runat="server"></asp:Label><br />
+            <asp:Label ID="Label4" runat="server"></asp:Label><br />
         </div>
     </form>
 </body>

@@ -21,7 +21,10 @@ Public Class WebForm1
             data = cookieReq.Data.Value
         End If
 
-        Me.Label1.Text = tes.Test & mySession.Data & " ." & vs.Data & " ." & data
+        Me.Label1.Text = String.Format("[ITest]={0}", tes.Test)
+        Me.Label2.Text = String.Format("[ISession]={0}", mySession.Data)
+        Me.Label3.Text = String.Format("[IVeweState]={0}", vs.Data)
+        Me.Label4.Text = String.Format("[ICookie]={0}", data)
         mySession.Data &= " Hoge"
         If vs.Data Is Nothing Then
             vs.Data = "0"
