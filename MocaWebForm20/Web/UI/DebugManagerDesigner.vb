@@ -29,7 +29,7 @@ Namespace Web.UI
 			sb = New StringBuilder()
 
 			sb.Append("<div id=""" + ctrl.ID + """ style=""position:absolute;top:0px;left:0px;font-size:9px;"">")
-			sb.Append("<img id=""DebugImg"" src=""" + img + """ class=""Debug"" alt=""‚±‚ê‚ÍƒfƒoƒbƒOŠÂ‹«‚Ì‚µ‚é‚µ‚Å‚·II"" style=""vertical-align:text-top;"" />")
+			sb.Append("<img id=""DebugImg"" src=""" + img + """ class=""Debug"" alt=""ã“ã‚Œã¯ãƒ‡ãƒãƒƒã‚°ç’°å¢ƒã®ã—ã‚‹ã—ã§ã™ï¼ï¼"" style=""vertical-align:text-top;"" />")
 			sb.Append("Debug Manager : " + ctrl.ID)
 			sb.Append("</div>")
 

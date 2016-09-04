@@ -6,7 +6,7 @@ Imports Moca.Util
 Namespace Web.Attr
 
 	''' <summary>
-	''' ƒNƒGƒŠ[•¶š—ñ‘®«‚Ì‰ğÍ
+	''' ã‚¯ã‚¨ãƒªãƒ¼æ–‡å­—åˆ—å±æ€§ã®è§£æ
 	''' </summary>
 	''' <remarks></remarks>
 	Public Class QueryStringAttributeAnalyzer
@@ -17,7 +17,7 @@ Namespace Web.Attr
 		End Function
 
 		Public Function Analyze(ByVal target As Object, ByVal field As System.Reflection.FieldInfo) As Di.MocaComponent Implements IAttributeAnalyzer.Analyze
-			' Interface H
+			' Interface ï¼Ÿ
 			If Not field.FieldType.IsInterface() Then
 				Return Nothing
 			End If

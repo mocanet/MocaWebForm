@@ -10,43 +10,43 @@ Imports Moca.web.Attr
 Namespace Web.UI
 
 	''' <summary>
-	''' ASP.NET •W€‚Ì Web Page ƒNƒ‰ƒX‚ÌŠg’£”Å
+	''' ASP.NET æ¨™æº–ã® Web Page ã‚¯ãƒ©ã‚¹ã®æ‹¡å¼µç‰ˆ
 	''' </summary>
 	''' <remarks>
-	''' ‹Æ–±ƒAƒvƒŠ‚ğì¬‚·‚é‚Æ‚«‚É‚ ‚é‚Æ•Ö—˜‚È‹@”\’B‚ğ’ñ‹Ÿ‚µ‚Ü‚·B
+	''' æ¥­å‹™ã‚¢ãƒ—ãƒªã‚’ä½œæˆã™ã‚‹ã¨ãã«ã‚ã‚‹ã¨ä¾¿åˆ©ãªæ©Ÿèƒ½é”ã‚’æä¾›ã—ã¾ã™ã€‚
 	''' </remarks>
 	Public Class MocaPage
 		Inherits System.Web.UI.Page
 
 #Region " Declare "
 
-		''' <summary>Web ƒT[ƒo[•Ï”ƒRƒŒƒNƒVƒ‡ƒ“</summary>
+		''' <summary>Web ã‚µãƒ¼ãƒãƒ¼å¤‰æ•°ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³</summary>
 		Protected serverVariables As IServerVariables
 
-		''' <summary>ƒy[ƒW‚É‘Î‚µ‚Ä‚ÌˆË‘¶«’“ü</summary>
+		''' <summary>ãƒšãƒ¼ã‚¸ã«å¯¾ã—ã¦ã®ä¾å­˜æ€§æ³¨å…¥</summary>
 		Private _injector As MocaPageInjector
 
-		''' <summary>Web—pƒ†[ƒeƒBƒŠƒeƒB</summary>
+		''' <summary>Webç”¨ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£</summary>
 		Private _webUtil As New WebUtil
 
-		''' <summary>ƒGƒ“ƒeƒBƒeƒBƒoƒCƒ“ƒ_[</summary>
+		''' <summary>ã‚¨ãƒ³ãƒ†ã‚£ãƒ†ã‚£ãƒã‚¤ãƒ³ãƒ€ãƒ¼</summary>
 		Private _entityBinder As EntityBinder
 
-		''' <summary>ƒ{ƒ^ƒ“‚ÌƒRƒ}ƒ“ƒhˆ——p</summary>
+		''' <summary>ãƒœã‚¿ãƒ³ã®ã‚³ãƒãƒ³ãƒ‰å‡¦ç†ç”¨</summary>
 		Private _commandHandlers As IDictionary(Of Type, Object)
 
 #End Region
 
-#Region " ƒRƒ“ƒXƒgƒ‰ƒNƒ^^ƒfƒXƒgƒ‰ƒNƒ^ "
+#Region " ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ï¼ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ "
 
 		''' <summary>
-		''' ƒfƒtƒHƒ‹ƒgƒRƒ“ƒXƒgƒ‰ƒNƒ^
+		''' ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 		''' </summary>
 		''' <remarks></remarks>
 		Public Sub New()
 			MyBase.New()
 
-			' ‘®«‚É‚æ‚éˆË‘¶«‚Ì’“ü
+			' å±æ€§ã«ã‚ˆã‚‹ä¾å­˜æ€§ã®æ³¨å…¥
 			_injector = New MocaPageInjector()
 			_injector.Inject(Me)
 
@@ -55,7 +55,7 @@ Namespace Web.UI
 		End Sub
 
 		''' <summary>
-		''' ƒfƒXƒgƒ‰ƒNƒ^
+		''' ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 		''' </summary>
 		''' <remarks></remarks>
 		Protected Overrides Sub Finalize()
@@ -64,10 +64,10 @@ Namespace Web.UI
 		End Sub
 
 #End Region
-#Region " ƒvƒƒpƒeƒB "
+#Region " ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ "
 
 		''' <summary>
-		''' ƒƒOƒCƒ“ƒ†[ƒU[‚ÌƒhƒƒCƒ“
+		''' ãƒ­ã‚°ã‚¤ãƒ³ãƒ¦ãƒ¼ã‚¶ãƒ¼ã®ãƒ‰ãƒ¡ã‚¤ãƒ³
 		''' </summary>
 		''' <value></value>
 		''' <returns></returns>
@@ -81,7 +81,7 @@ Namespace Web.UI
 		End Property
 
 		''' <summary>
-		''' ƒƒOƒCƒ“ƒ†[ƒU[ID
+		''' ãƒ­ã‚°ã‚¤ãƒ³ãƒ¦ãƒ¼ã‚¶ãƒ¼ID
 		''' </summary>
 		''' <value></value>
 		''' <returns></returns>
@@ -98,9 +98,9 @@ Namespace Web.UI
 		End Property
 
 		''' <summary>
-		''' Transfer ƒƒ\ƒbƒh‚É‚æ‚éƒy[ƒW‘JˆÚ‚©‚Ç‚¤‚©•Ô‚·B
+		''' Transfer ãƒ¡ã‚½ãƒƒãƒ‰ã«ã‚ˆã‚‹ãƒšãƒ¼ã‚¸é·ç§»ã‹ã©ã†ã‹è¿”ã™ã€‚
 		''' </summary>
-		''' <returns>True ‚Í Transfer ƒƒ\ƒbƒh‚É‚æ‚éƒy[ƒW‘JˆÚAFalse ‚Í Transfer ƒƒ\ƒbƒh‚É‚æ‚éƒy[ƒW‘JˆÚ‚Å‚Í‚È‚¢B</returns>
+		''' <returns>True ã¯ Transfer ãƒ¡ã‚½ãƒƒãƒ‰ã«ã‚ˆã‚‹ãƒšãƒ¼ã‚¸é·ç§»ã€False ã¯ Transfer ãƒ¡ã‚½ãƒƒãƒ‰ã«ã‚ˆã‚‹ãƒšãƒ¼ã‚¸é·ç§»ã§ã¯ãªã„ã€‚</returns>
 		''' <remarks></remarks>
 		Protected ReadOnly Property IsPreviousPageTransfer() As Boolean
 			Get
@@ -109,9 +109,9 @@ Namespace Web.UI
 		End Property
 
 		''' <summary>
-		''' ƒNƒ‰ƒCƒAƒ“ƒg‚©‚ç•Êƒy[ƒW‚É‚æ‚éƒy[ƒW‘JˆÚ‚©‚Ç‚¤‚©•Ô‚·B
+		''' ã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆã‹ã‚‰åˆ¥ãƒšãƒ¼ã‚¸ã«ã‚ˆã‚‹ãƒšãƒ¼ã‚¸é·ç§»ã‹ã©ã†ã‹è¿”ã™ã€‚
 		''' </summary>
-		''' <returns>True ‚ÍƒNƒ‰ƒCƒAƒ“ƒg‚©‚ç•Êƒy[ƒW‚É‚æ‚éƒy[ƒW‘JˆÚAFalse ‚ÍƒNƒ‰ƒCƒAƒ“ƒg‚©‚ç•Êƒy[ƒW‚É‚æ‚éƒy[ƒW‘JˆÚ‚Å‚Í‚È‚¢B</returns>
+		''' <returns>True ã¯ã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆã‹ã‚‰åˆ¥ãƒšãƒ¼ã‚¸ã«ã‚ˆã‚‹ãƒšãƒ¼ã‚¸é·ç§»ã€False ã¯ã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆã‹ã‚‰åˆ¥ãƒšãƒ¼ã‚¸ã«ã‚ˆã‚‹ãƒšãƒ¼ã‚¸é·ç§»ã§ã¯ãªã„ã€‚</returns>
 		''' <remarks></remarks>
 		Protected ReadOnly Property IsPreviousPagePostBack() As Boolean
 			Get
@@ -125,10 +125,10 @@ Namespace Web.UI
 
 #End Region
 
-#Region " ƒƒ\ƒbƒh "
+#Region " ãƒ¡ã‚½ãƒƒãƒ‰ "
 
 		''' <summary>
-		''' ƒfƒtƒHƒ‹ƒgƒy[ƒW‚ÖƒŠƒ_ƒCƒŒƒNƒg
+		''' ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒšãƒ¼ã‚¸ã¸ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ
 		''' </summary>
 		''' <remarks></remarks>
 		Protected Sub RedirectDefaultUrl()
@@ -136,8 +136,8 @@ Namespace Web.UI
 		End Sub
 
 		''' <summary>
-		''' Transfer ƒƒ\ƒbƒh‚É‚æ‚éƒy[ƒW‘JˆÚ‚©‚Ç‚¤‚©ƒ`ƒFƒbƒN‚µA
-		''' ’¼ÚƒAƒNƒZƒX‚Ì‚Íƒgƒbƒvƒy[ƒW‚ğ•\¦‚·‚éB
+		''' Transfer ãƒ¡ã‚½ãƒƒãƒ‰ã«ã‚ˆã‚‹ãƒšãƒ¼ã‚¸é·ç§»ã‹ã©ã†ã‹ãƒã‚§ãƒƒã‚¯ã—ã€
+		''' ç›´æ¥ã‚¢ã‚¯ã‚»ã‚¹ã®æ™‚ã¯ãƒˆãƒƒãƒ—ãƒšãƒ¼ã‚¸ã‚’è¡¨ç¤ºã™ã‚‹ã€‚
 		''' </summary>
 		''' <remarks></remarks>
 		Protected Sub ChkPreviousPageTransfer()
@@ -149,8 +149,8 @@ Namespace Web.UI
 		End Sub
 
 		''' <summary>
-		''' ƒNƒ‰ƒCƒAƒ“ƒg‚©‚ç•Êƒy[ƒW‚É‚æ‚éƒy[ƒW‘JˆÚ‚©‚Ç‚¤‚©ƒ`ƒFƒbƒN‚µA
-		''' ’¼ÚƒAƒNƒZƒX‚Ì‚Íƒgƒbƒvƒy[ƒW‚ğ•\¦‚·‚éB
+		''' ã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆã‹ã‚‰åˆ¥ãƒšãƒ¼ã‚¸ã«ã‚ˆã‚‹ãƒšãƒ¼ã‚¸é·ç§»ã‹ã©ã†ã‹ãƒã‚§ãƒƒã‚¯ã—ã€
+		''' ç›´æ¥ã‚¢ã‚¯ã‚»ã‚¹ã®æ™‚ã¯ãƒˆãƒƒãƒ—ãƒšãƒ¼ã‚¸ã‚’è¡¨ç¤ºã™ã‚‹ã€‚
 		''' </summary>
 		''' <remarks></remarks>
 		Protected Sub ChkPreviousPagePostBack()
@@ -162,7 +162,7 @@ Namespace Web.UI
 		End Sub
 
 		''' <summary>
-		''' ƒRƒ“ƒ{ƒ{ƒbƒNƒX‚Ì’lİ’è
+		''' ã‚³ãƒ³ãƒœãƒœãƒƒã‚¯ã‚¹ã®å€¤è¨­å®š
 		''' </summary>
 		''' <param name="cbo"></param>
 		''' <param name="valueField"></param>
@@ -183,7 +183,7 @@ Namespace Web.UI
 		End Sub
 
 		''' <summary>
-		''' ƒRƒ“ƒ{ƒ{ƒbƒNƒX‚Ì’lİ’è
+		''' ã‚³ãƒ³ãƒœãƒœãƒƒã‚¯ã‚¹ã®å€¤è¨­å®š
 		''' </summary>
 		''' <param name="lst"></param>
 		''' <param name="valueField"></param>
@@ -205,7 +205,7 @@ Namespace Web.UI
 		End Sub
 
 		''' <summary>
-		''' ƒ{ƒ^ƒ“‚ªƒNƒŠƒbƒN‚³‚ê‚½‚Æ‚«‚ÌƒRƒ}ƒ“ƒh‚ğƒnƒ“ƒhƒ‰[‚Ö’Ç‰Á
+		''' ãƒœã‚¿ãƒ³ãŒã‚¯ãƒªãƒƒã‚¯ã•ã‚ŒãŸã¨ãã®ã‚³ãƒãƒ³ãƒ‰ã‚’ãƒãƒ³ãƒ‰ãƒ©ãƒ¼ã¸è¿½åŠ 
 		''' </summary>
 		''' <typeparam name="T"></typeparam>
 		''' <param name="commandName"></param>
@@ -223,7 +223,7 @@ Namespace Web.UI
 		End Sub
 
 		''' <summary>
-		''' ƒ{ƒ^ƒ“‚ªƒNƒŠƒbƒN‚³‚ê‚½‚Æ‚«‚ÌƒRƒ}ƒ“ƒh‚ğƒnƒ“ƒhƒ‰[‚©‚çæ“¾
+		''' ãƒœã‚¿ãƒ³ãŒã‚¯ãƒªãƒƒã‚¯ã•ã‚ŒãŸã¨ãã®ã‚³ãƒãƒ³ãƒ‰ã‚’ãƒãƒ³ãƒ‰ãƒ©ãƒ¼ã‹ã‚‰å–å¾—
 		''' </summary>
 		''' <typeparam name="T"></typeparam>
 		''' <param name="commandName"></param>
@@ -246,7 +246,7 @@ Namespace Web.UI
 #Region " EntityBinder "
 
 		''' <summary>
-		''' ƒy[ƒW‚ÆƒGƒ“ƒeƒBƒeƒB‚ğƒoƒCƒ“ƒh‚·‚é
+		''' ãƒšãƒ¼ã‚¸ã¨ã‚¨ãƒ³ãƒ†ã‚£ãƒ†ã‚£ã‚’ãƒã‚¤ãƒ³ãƒ‰ã™ã‚‹
 		''' </summary>
 		''' <param name="page"></param>
 		''' <param name="entity"></param>
@@ -256,11 +256,11 @@ Namespace Web.UI
 		End Sub
 
 		''' <summary>
-		''' ƒy[ƒW‚Ì“ü—Í“à—e‚ğƒGƒ“ƒeƒBƒeƒB‚Ö”½‰f‚·‚é
+		''' ãƒšãƒ¼ã‚¸ã®å…¥åŠ›å†…å®¹ã‚’ã‚¨ãƒ³ãƒ†ã‚£ãƒ†ã‚£ã¸åæ˜ ã™ã‚‹
 		''' </summary>
 		''' <param name="page"></param>
 		''' <param name="entity"></param>
-		''' <param name="validateMethod">“ü—Í’lŒŸØ‚·‚é‚Æ‚«‚Íƒƒ\ƒbƒh‚ğw’è</param>
+		''' <param name="validateMethod">å…¥åŠ›å€¤æ¤œè¨¼ã™ã‚‹ã¨ãã¯ãƒ¡ã‚½ãƒƒãƒ‰ã‚’æŒ‡å®š</param>
 		''' <returns></returns>
 		''' <remarks></remarks>
 		Protected Function UpdateEntity(ByVal page As Page, ByVal entity As Object, Optional ByVal validateMethod As UpdateEntityValidate = Nothing) As Boolean
@@ -270,13 +270,13 @@ Namespace Web.UI
 #End Region
 
         ''' <summary>
-        ''' w’è‚³‚ê‚½ƒvƒƒpƒeƒB‚©‚çƒNƒGƒŠ[•¶š—ñ‚ğì¬‚·‚éB
+        ''' æŒ‡å®šã•ã‚ŒãŸãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‹ã‚‰ã‚¯ã‚¨ãƒªãƒ¼æ–‡å­—åˆ—ã‚’ä½œæˆã™ã‚‹ã€‚
         ''' </summary>
         ''' <param name="values"></param>
         ''' <returns></returns>
         ''' <remarks>
-        ''' À‘•o—ˆ‚»‚¤‚Åo—ˆ‚È‚¢ƒƒ\ƒbƒhB
-        ''' “§‰ßƒvƒƒLƒVƒCƒ“ƒXƒ^ƒ“ƒX‚©‚çŒ^‚Ìî•ñ‚ª‚¤‚Ü‚­æ‚ê‚È‚¢‚½‚ßB
+        ''' å®Ÿè£…å‡ºæ¥ãã†ã§å‡ºæ¥ãªã„ãƒ¡ã‚½ãƒƒãƒ‰ã€‚
+        ''' é€éãƒ—ãƒ­ã‚­ã‚·ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‹ã‚‰å‹ã®æƒ…å ±ãŒã†ã¾ãå–ã‚Œãªã„ãŸã‚ã€‚
         ''' </remarks>
         <Obsolete("No Support Method")>
         Private Function ToQueryString(ByVal values As Object) As String
@@ -284,9 +284,9 @@ Namespace Web.UI
         End Function
 
         ''' <summary>
-        ''' w’è‚³‚ê‚½ƒvƒƒpƒeƒB‚©‚çƒNƒGƒŠ[•¶š—ñ‚ğì¬‚·‚éB
+        ''' æŒ‡å®šã•ã‚ŒãŸãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‹ã‚‰ã‚¯ã‚¨ãƒªãƒ¼æ–‡å­—åˆ—ã‚’ä½œæˆã™ã‚‹ã€‚
         ''' </summary>
-        ''' <param name="values">ƒNƒGƒŠ[’l‚ğ•Û‚µ‚½ƒIƒuƒWƒFƒNƒg</param>
+        ''' <param name="values">ã‚¯ã‚¨ãƒªãƒ¼å€¤ã‚’ä¿æŒã—ãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ</param>
         ''' <returns></returns>
         ''' <remarks></remarks>
         Public Function ToQueryString(Of T)(ByVal values As Object, Optional ByVal questionMark As Boolean = True) As String
@@ -294,14 +294,14 @@ Namespace Web.UI
 		End Function
 
 		''' <summary>
-		''' “–ƒVƒXƒeƒ€‚Ì‰¼‘zƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ‚Ü‚Å‚ÌURL
+		''' å½“ã‚·ã‚¹ãƒ†ãƒ ã®ä»®æƒ³ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã¾ã§ã®URL
 		''' </summary>
 		''' <returns></returns>
 		''' <remarks></remarks>
 		Protected Function GetUrlBase() As String
 			Dim urlBase As StringBuilder = New StringBuilder
 
-			' ‰¼‘zƒfƒBƒŒƒNƒgƒŠ‚Ü‚Å‚ÌURL‚ğì¬ihttp://hoge.com/hogej
+			' ä»®æƒ³ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã¾ã§ã®URLã‚’ä½œæˆï¼ˆhttp://hoge.com/hogeï¼‰
 			urlBase.Append(Me.Request.Url.Scheme)
 			urlBase.Append(System.Uri.SchemeDelimiter)
 			urlBase.Append(Me.Request.Url.Authority)
@@ -312,10 +312,10 @@ Namespace Web.UI
 		End Function
 
 		''' <summary>
-		''' ƒpƒXƒ[ƒh‚ÌˆÃ†‰»
+		''' ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã®æš—å·åŒ–
 		''' </summary>
-		''' <param name="passwd">ˆÃ†‰»‚·‚éƒpƒXƒ[ƒh</param>
-		''' <param name="passwdFormat">ˆÃ†‰»•û®</param>
+		''' <param name="passwd">æš—å·åŒ–ã™ã‚‹ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰</param>
+		''' <param name="passwdFormat">æš—å·åŒ–æ–¹å¼</param>
 		''' <returns></returns>
 		''' <remarks></remarks>
 		Protected Function HashPassword(ByVal passwd As String, ByVal passwdFormat As String) As String

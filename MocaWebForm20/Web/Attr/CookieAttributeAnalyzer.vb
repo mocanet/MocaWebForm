@@ -7,7 +7,7 @@ Imports Moca.Util
 Namespace Web.Attr
 
 	''' <summary>
-	''' ƒNƒbƒL[‘®«‰ğÍ
+	''' ã‚¯ãƒƒã‚­ãƒ¼å±æ€§è§£æ
 	''' </summary>
 	''' <remarks></remarks>
 	Public Class CookieAttributeAnalyzer
@@ -18,7 +18,7 @@ Namespace Web.Attr
 		End Function
 
 		Public Function Analyze(ByVal target As Object, ByVal field As System.Reflection.FieldInfo) As Di.MocaComponent Implements IAttributeAnalyzer.Analyze
-			' Interface H
+			' Interface ï¼Ÿ
 			If Not field.FieldType.IsInterface() Then
 				Return Nothing
 			End If

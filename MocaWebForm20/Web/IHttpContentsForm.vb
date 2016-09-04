@@ -2,20 +2,20 @@
 Namespace Web
 
     ''' <summary>
-    ''' Http���̃C���^�Z�v�^�[�Ŏg�p����R���e���c�C���^�t�F�[�X
+    ''' Http時のインタセプターで使用するコンテンツインタフェース
     ''' </summary>
     ''' <remarks></remarks>
     Public Interface IHttpContentsForm
         Inherits IHttpContents
 
         ''' <summary>
-        ''' �r���[�X�e�[�g�v���p�e�B
+        ''' ビューステートプロパティ
         ''' </summary>
         ''' <value></value>
         ''' <returns></returns>
         ''' <remarks>
-        ''' Page ���́AMasterPage �̂ǂ��炩�ɃI�u�W�F�N�g�����݂���Ƃ��́A���݂��Ă���I�u�W�F�N�g�� StateBag ��Ԃ��B
-        ''' �����ɃI�u�W�F�N�g�����݂��Ă���Ƃ��́A����ł͂��肦�Ȃ��B
+        ''' Page 又は、MasterPage のどちらかにオブジェクトが存在するときは、存在しているオブジェクトの StateBag を返す。
+        ''' 両方にオブジェクトが存在しているときは、現状ではありえない。
         ''' </remarks>
         ReadOnly Property ViewState() As StateBag
 

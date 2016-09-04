@@ -6,7 +6,7 @@ Imports Moca.Util
 Namespace Web.Attr
 
 	''' <summary>
-	''' Web ƒT[ƒo[•Ï”ƒRƒŒƒNƒVƒ‡ƒ“‘®«‚Ì‰ğÍ
+	''' Web ã‚µãƒ¼ãƒãƒ¼å¤‰æ•°ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³å±æ€§ã®è§£æ
 	''' </summary>
 	''' <remarks></remarks>
 	Public Class ServerVariablesAttributeAnalyzer
@@ -17,7 +17,7 @@ Namespace Web.Attr
 		End Function
 
 		Public Function Analyze(ByVal target As Object, ByVal field As System.Reflection.FieldInfo) As Di.MocaComponent Implements IAttributeAnalyzer.Analyze
-			' Interface H
+			' Interface ï¼Ÿ
 			If Not field.FieldType.IsInterface() Then
 				Return Nothing
 			End If

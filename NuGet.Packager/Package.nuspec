@@ -20,7 +20,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright © 2015 MiYABiS All Rights Reserved.</copyright>
     <dependencies>
-      <dependency id="Moca.NETWebApp" version="2.1.0" />
+      <dependency id="Moca.NETWebApp" version="2.1.0-beta" />
     </dependencies>
     <references></references>
     <tags>AOP DI ASP.NET</tags>

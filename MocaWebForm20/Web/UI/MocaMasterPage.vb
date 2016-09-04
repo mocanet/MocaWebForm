@@ -8,38 +8,38 @@ Imports Moca.Db.Attr
 Namespace Web.UI
 
 	''' <summary>
-	''' ASP.NET •W€‚Ì Web MasterPage ƒNƒ‰ƒX‚ÌŠg’£”Å
+	''' ASP.NET æ¨™æº–ã® Web MasterPage ã‚¯ãƒ©ã‚¹ã®æ‹¡å¼µç‰ˆ
 	''' </summary>
 	''' <remarks>
-	''' ‹Æ–±ƒAƒvƒŠ‚ğì¬‚·‚é‚Æ‚«‚É‚ ‚é‚Æ•Ö—˜‚È‹@”\’B‚ğ’ñ‹Ÿ‚µ‚Ü‚·B
+	''' æ¥­å‹™ã‚¢ãƒ—ãƒªã‚’ä½œæˆã™ã‚‹ã¨ãã«ã‚ã‚‹ã¨ä¾¿åˆ©ãªæ©Ÿèƒ½é”ã‚’æä¾›ã—ã¾ã™ã€‚
 	''' </remarks>
 	Public Class MocaMasterPage
 		Inherits System.Web.UI.MasterPage
 
-		''' <summary>ƒy[ƒW‚É‘Î‚µ‚Ä‚ÌˆË‘¶«’“ü</summary>
+		''' <summary>ãƒšãƒ¼ã‚¸ã«å¯¾ã—ã¦ã®ä¾å­˜æ€§æ³¨å…¥</summary>
 		Private _injector As MocaPageInjector
 
 		Private _webUtil As New WebUtil
 
-		''' <summary>Web ƒT[ƒo[•Ï”ƒRƒŒƒNƒVƒ‡ƒ“</summary>
+		''' <summary>Web ã‚µãƒ¼ãƒãƒ¼å¤‰æ•°ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³</summary>
 		Protected serverVariables As IServerVariables
 
-#Region " ƒRƒ“ƒXƒgƒ‰ƒNƒ^^ƒfƒXƒgƒ‰ƒNƒ^ "
+#Region " ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ï¼ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ "
 
 		''' <summary>
-		''' ƒfƒtƒHƒ‹ƒgƒRƒ“ƒXƒgƒ‰ƒNƒ^
+		''' ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 		''' </summary>
 		''' <remarks></remarks>
 		Public Sub New()
 			MyBase.New()
 
-			' ‘®«‚É‚æ‚éˆË‘¶«‚Ì’“ü
+			' å±æ€§ã«ã‚ˆã‚‹ä¾å­˜æ€§ã®æ³¨å…¥
 			_injector = New MocaPageInjector()
 			_injector.Inject(Me)
 		End Sub
 
 		''' <summary>
-		''' ƒfƒXƒgƒ‰ƒNƒ^
+		''' ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 		''' </summary>
 		''' <remarks></remarks>
 		Protected Overrides Sub Finalize()
@@ -48,21 +48,21 @@ Namespace Web.UI
 		End Sub
 
 #End Region
-#Region " ƒvƒƒpƒeƒB "
+#Region " ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ "
 
 #End Region
-#Region " ƒCƒxƒ“ƒg "
+#Region " ã‚¤ãƒ™ãƒ³ãƒˆ "
 
 #End Region
 
 		''' <summary>
-		''' w’è‚³‚ê‚½ƒvƒƒpƒeƒB‚©‚çƒNƒGƒŠ[•¶š—ñ‚ğì¬‚·‚éB
+		''' æŒ‡å®šã•ã‚ŒãŸãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‹ã‚‰ã‚¯ã‚¨ãƒªãƒ¼æ–‡å­—åˆ—ã‚’ä½œæˆã™ã‚‹ã€‚
 		''' </summary>
 		''' <param name="values"></param>
 		''' <returns></returns>
 		''' <remarks>
-		''' À‘•o—ˆ‚»‚¤‚Åo—ˆ‚È‚¢ƒƒ\ƒbƒhB
-		''' “§‰ßƒvƒƒLƒVƒCƒ“ƒXƒ^ƒ“ƒX‚©‚çŒ^‚Ìî•ñ‚ª‚¤‚Ü‚­æ‚ê‚È‚¢‚½‚ßB
+		''' å®Ÿè£…å‡ºæ¥ãã†ã§å‡ºæ¥ãªã„ãƒ¡ã‚½ãƒƒãƒ‰ã€‚
+		''' é€éãƒ—ãƒ­ã‚­ã‚·ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‹ã‚‰å‹ã®æƒ…å ±ãŒã†ã¾ãå–ã‚Œãªã„ãŸã‚ã€‚
 		''' </remarks>
 		<Obsolete("No Support Method")> _
 		Public Function ToQueryString(ByVal values As Object) As String
@@ -70,9 +70,9 @@ Namespace Web.UI
 		End Function
 
 		''' <summary>
-		''' w’è‚³‚ê‚½ƒvƒƒpƒeƒB‚©‚çƒNƒGƒŠ[•¶š—ñ‚ğì¬‚·‚éB
+		''' æŒ‡å®šã•ã‚ŒãŸãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‹ã‚‰ã‚¯ã‚¨ãƒªãƒ¼æ–‡å­—åˆ—ã‚’ä½œæˆã™ã‚‹ã€‚
 		''' </summary>
-		''' <param name="values">ƒNƒGƒŠ[’l‚ğ•Û‚µ‚½ƒIƒuƒWƒFƒNƒg</param>
+		''' <param name="values">ã‚¯ã‚¨ãƒªãƒ¼å€¤ã‚’ä¿æŒã—ãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ</param>
 		''' <returns></returns>
 		''' <remarks></remarks>
 		Public Function ToQueryString(Of T)(ByVal values As Object, Optional ByVal questionMark As Boolean = True) As String
@@ -80,14 +80,14 @@ Namespace Web.UI
 		End Function
 
 		''' <summary>
-		''' “–ƒVƒXƒeƒ€‚Ì‰¼‘zƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ‚Ü‚Å‚ÌURL
+		''' å½“ã‚·ã‚¹ãƒ†ãƒ ã®ä»®æƒ³ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã¾ã§ã®URL
 		''' </summary>
 		''' <returns></returns>
 		''' <remarks></remarks>
 		Protected Function GetUrlBase() As String
 			Dim urlBase As StringBuilder = New StringBuilder
 
-			' ‰¼‘zƒfƒBƒŒƒNƒgƒŠ‚Ü‚Å‚ÌURL‚ğì¬ihttp://hoge.com/hogej
+			' ä»®æƒ³ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã¾ã§ã®URLã‚’ä½œæˆï¼ˆhttp://hoge.com/hogeï¼‰
 			urlBase.Append(Me.Request.Url.Scheme)
 			urlBase.Append(System.Uri.SchemeDelimiter)
 			urlBase.Append(Me.Request.Url.Authority)

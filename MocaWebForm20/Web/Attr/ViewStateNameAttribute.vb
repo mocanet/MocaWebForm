@@ -2,35 +2,35 @@
 Namespace Web.Attr
 
 	''' <summary>
-	''' �r���[�X�e�[�g�ϐ�������
+	''' ビューステート変数名属性
 	''' </summary>
 	''' <remarks>
-	''' �ʏ�̓v���p�e�B�������̂܂܃r���[�X�e�[�g�ϐ��̃L�[�Ƃ��Ďg�p���܂����A
-	''' �v���p�e�B���Ƃ͕ʂɎw�肵�����Ƃ��́A���̑����Ŏw�肵�܂��B
+	''' 通常はプロパティ名をそのままビューステート変数のキーとして使用しますが、
+	''' プロパティ名とは別に指定したいときは、この属性で指定します。
 	''' </remarks>
 	<AttributeUsage(AttributeTargets.Property)> _
 	Public Class ViewStateNameAttribute
 		Inherits Attribute
 
-		''' <summary>�r���[�X�e�[�g��</summary>
+		''' <summary>ビューステート名</summary>
 		Private _name As String
 
-#Region " �R���X�g���N�^ "
+#Region " コンストラクタ "
 
 		''' <summary>
-		''' �R���X�g���N�^
+		''' コンストラクタ
 		''' </summary>
-		''' <param name="name">�r���[�X�e�[�g��</param>
+		''' <param name="name">ビューステート名</param>
 		''' <remarks></remarks>
 		Public Sub New(ByVal name As String)
 			_name = name
 		End Sub
 
 #End Region
-#Region " �v���p�e�B "
+#Region " プロパティ "
 
 		''' <summary>
-		''' �r���[�X�e�[�g���v���p�e�B
+		''' ビューステート名プロパティ
 		''' </summary>
 		''' <value></value>
 		''' <returns></returns>

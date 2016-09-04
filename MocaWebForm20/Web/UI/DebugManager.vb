@@ -15,7 +15,7 @@ Imports System.Drawing.Design
 Namespace Web.UI
 
 	''' <summary>
-	''' ƒfƒoƒbƒOˆó
+	''' ãƒ‡ãƒãƒƒã‚°å°
 	''' </summary>
 	''' <remarks></remarks>
 	<DefaultProperty("ReleaseUrl") _
@@ -29,7 +29,7 @@ Namespace Web.UI
 		<Bindable(True) _
 		, Category("Appearance") _
 		, DefaultValue("") _
-		, Description("–{”ÔƒTƒCƒg‚Ì‚t‚q‚k‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢") _
+		, Description("æœ¬ç•ªã‚µã‚¤ãƒˆã®ï¼µï¼²ï¼¬ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„") _
 		, Editor(GetType(System.Web.UI.Design.UrlEditor), GetType(UITypeEditor)) _
 		> _
 		Property ReleaseUrl() As String
@@ -70,7 +70,7 @@ Namespace Web.UI
 				writer.AddAttribute(HtmlTextWriterAttribute.Src, img)
 				writer.AddAttribute(HtmlTextWriterAttribute.Class, "Debug")
 				writer.AddAttribute("ondblclick", "window.open('" + ReleaseUrl + "')")
-				writer.AddAttribute(HtmlTextWriterAttribute.Alt, "‚±‚ê‚ÍƒfƒoƒbƒOŠÂ‹«‚Ì‚µ‚é‚µ‚Å‚·II")
+				writer.AddAttribute(HtmlTextWriterAttribute.Alt, "ã“ã‚Œã¯ãƒ‡ãƒãƒƒã‚°ç’°å¢ƒã®ã—ã‚‹ã—ã§ã™ï¼ï¼")
 				writer.RenderBeginTag(HtmlTextWriterTag.Img)
 				writer.RenderEndTag()
 				writer.RenderEndTag()
