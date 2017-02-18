@@ -22,6 +22,7 @@
             <asp:Button ID="btn2" runat="server" Text="退避" />
             <asp:Button ID="btn3" runat="server" Text="復元" />
         </div>
+        <moca:DebugManager ID="DebugManager1" runat="server" EnableViewState="false" />
     </form>
 </body>
 </html>
