@@ -212,12 +212,12 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\MocaWebForm20\images\debug.bmp">
+    <EmbeddedResource Include="..\MocaWebForm20\images\debug.bmp">
       <Link>images\debug.bmp</Link>
-    </Content>
-    <Content Include="..\MocaWebForm20\images\debug.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\MocaWebForm20\images\debug.png">
       <Link>images\debug.png</Link>
-    </Content>
+    </EmbeddedResource>
     <Content Include="..\MocaWebForm20\Key.snk">
       <Link>Key.snk</Link>
     </Content>
