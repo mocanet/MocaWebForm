@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MocaWebForm\MocaWebForm20.vbproj" />
+    <ProjectReference Include="..\MocaWebForm\MocaWebForm35.vbproj" />
+    <ProjectReference Include="..\MocaWebForm\MocaWebForm40.vbproj" />
+    <ProjectReference Include="..\MocaWebForm\MocaWebForm45.vbproj" />
+    <ProjectReference Include="..\MocaWebForm\MocaWebForm452.vbproj" />
+    <ProjectReference Include="..\MocaWebForm\MocaWebForm46.vbproj" />
+    <ProjectReference Include="..\MocaWebForm\MocaWebForm462.vbproj" />
+    <ProjectReference Include="..\MocaWebForm\MocaWebForm47.vbproj" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>75847e82-6e88-45c5-a921-a649910ef3a4</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <id>Moca.NETWebForm</id>
+    <title>Moca.NET Web Form</title>
+    <version>3.0.0-beta01</version>
+    <authors>MiYABiS</authors>
+    <owners>MiYABiS</owners>
+    <description>DI with AOP framework Moca.NET Web Form</description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>DI with AOP framework Moca.NET Web Form</summary>
+    <projectUrl>https://github.com/mocanet/MocaWebForm</projectUrl>
+    <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
+    <copyright>Copyright © 2015 MiYABiS All Rights Reserved.</copyright>
+    <tags>Moca.NET ASP.NET WebForm</tags>
+    <IconUrl>https://avatars3.githubusercontent.com/u/14543303?s=256</IconUrl>
+    <EmbedSourceFiles>true</EmbedSourceFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NuProjPath>..\packages\NuProj.0.11.30\tools\</NuProjPath>
+  </PropertyGroup>
+  <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
+  <Import Project="$(NuProjPath)\NuProj.targets" />
+</Project>
